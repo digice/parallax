@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Roderic Linguri <linguri@digices.com">
+    <title>Parallax Demo</title>
+    <style>
+      #view {
+        overflow: hidden;
+        position: relative;
+        height: 360px;
+      }
+      #image {
+        position: absolute;
+        width: 100%;
+        height: 600px;
+        }
+    </style>
+  </head>
+  <body style="min-height: 1200px;">
+    <h1>Parallax Demo</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut molestie ipsum. Nunc vulputate augue a rutrum convallis. Fusce et felis non diam vehicula consectetur. Fusce hendrerit justo in congue tempor. Suspendisse cursus enim vitae neque consequat ultrices. Aliquam vel lacus faucibus odio semper venenatis at non lacus. In interdum cursus ligula, et dignissim enim finibus sit amet. Vivamus suscipit sed magna non dignissim. Curabitur diam sapien, dignissim nec nulla quis, dapibus ornare nisl. Aliquam nec tempus diam. Aliquam at ligula ac sem ullamcorper aliquet. Etiam pharetra quam turpis. Ut in ligula arcu.</p>    
+    <div id="view">
+      <img src="img/feature.jpg" id="image">
+    </div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut molestie ipsum. Nunc vulputate augue a rutrum convallis. Fusce et felis non diam vehicula consectetur. Fusce hendrerit justo in congue tempor. Suspendisse cursus enim vitae neque consequat ultrices. Aliquam vel lacus faucibus odio semper venenatis at non lacus. In interdum cursus ligula, et dignissim enim finibus sit amet. Vivamus suscipit sed magna non dignissim. Curabitur diam sapien, dignissim nec nulla quis, dapibus ornare nisl. Aliquam nec tempus diam. Aliquam at ligula ac sem ullamcorper aliquet. Etiam pharetra quam turpis. Ut in ligula arcu.</p>    
+    <script src="js/jquery.js"></script>
+    <script>
+      $('document').ready(function() {
+        var i = $('#image');
+        $(window).scroll(function() {
+          var y = window.pageYOffset;
+          var p = y * 0.5;
+          i.css('top', ( p * -1) + 'px');
+        });
+      });
+    </script>
+  </body>
+</html>
